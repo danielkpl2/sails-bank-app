@@ -1,0 +1,14 @@
+<div id="app">
+	<% if(flash && flash.warning){ %>
+		<div class="alert alert-warning">
+			<%= flash.warning %>
+		</div>
+	<% }else if(flash && flash.info){ %>
+		<div class="alert alert-info">
+			<%= flash.info %>
+		</div>
+	<% } %>
+	<div className="container">
+    <a style="text-align: center; font-size: 70px; display: block;" href="/bamboolean/new">Bambank</a>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<h2 class="heading-frontend"><%= __('Bambank online banking') %></h2>
+
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="/">Bambank</a></li>
+		<li class="breadcrumb-item active">Bamboolean online banking</li>
+	</ol>
+
+	<% if(flash && flash.warning){ %>
+		<div class="alert alert-warning">
+			<%= flash.warning %>
+		</div>
+	<% }else if(flash && flash.info){ %>
+		<div class="alert alert-info">
+			<%= flash.info %>
+		</div>
+	<% } %>
+
+	<div class="" id="Portal">
+		
+	</div>
+
+<% if (sails.config.environment === 'development') { %>
+		<!-- <script src="<%=// sails.config.url %>:8080/dist/login.bundle.js"></script> -->
+	<script src="http://localhost:8080/dist/portal.bundle.js"></script>
+
+<% } else { %>
+    <script src="<%= bundle %>"></script>
+<% } %>
